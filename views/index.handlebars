@@ -1,0 +1,31 @@
+
+<h1>Eat-Da-Pizza!</h1>
+
+{{!-- <h2>Your Pizzas</h2> --}}
+<ul>
+    {{#each pizzas}}
+    {{#unless polish}}
+        {{> pizzas/pizza-block polish=false}}
+    {{/unless}}
+    {{/each}}
+<button type="submit">Polish that Pizza!</button>
+</ul>
+
+{{!-- <h2>Polished Pizzas</h2> --}}
+
+<ul>
+{{#each pizzas}}
+    {{#if polish}}
+    {{> pizzas/pizza-block polish=true}}
+    {{/if}}
+{{/each}}
+</ul>
+
+<form class="create-form">
+    <div id="pic"></div>
+<div class="form-group">
+    <textarea id="pi" name="pizza" cols="20" rows="20" class="form-control"></textarea>
+    <label for="pi">Enter a Pizza you want to eat and click the submit button</label>
+</div>
+<button type="submit">Submit</button>
+</form>

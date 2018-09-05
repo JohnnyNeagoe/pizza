@@ -1,0 +1,8 @@
+body{
+    background-color: lightcoral;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#pic{
+    background-image: url("../img/pizza.jpg")
+}
