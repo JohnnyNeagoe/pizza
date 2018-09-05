@@ -20,5 +20,5 @@ let pizza = {
   },
 };
 
-// Export the database functions for the controller (catsController.js).
+// Export the database functions for the controller (pizza_Controller.js).
 module.exports = pizza;

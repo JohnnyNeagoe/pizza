@@ -1,31 +1,41 @@
-
 <h1>Eat-Da-Pizza!</h1>
 
-{{!-- <h2>Your Pizzas</h2> --}}
-<ul>
-    {{#each pizzas}}
-    {{#unless polish}}
-        {{> pizzas/pizza-block polish=false}}
-    {{/unless}}
-    {{/each}}
-<button type="submit">Polish that Pizza!</button>
-</ul>
-
-{{!-- <h2>Polished Pizzas</h2> --}}
-
-<ul>
-{{#each pizzas}}
-    {{#if polish}}
-    {{> pizzas/pizza-block polish=true}}
-    {{/if}}
-{{/each}}
-</ul>
-
-<form class="create-form">
-    <div id="pic"></div>
-    <div class="form-group">
-        <textarea id="pi" name="pizza" cols="40" rows="10" class="form-control"></textarea>
+<main>
+<div class="container">
+    <div class="row">
+    <div class="col s6">
+        {{#each pizzas}}
+        {{#unless this.polished}}
+            <div>
+            <form action="/pizzas/{{this.id}}?_method=PUT" method="POST">
+                <button type="submit" class='pizzaAvailable'> {{this.pizza_name}}</button>
+            </form>
+            </div>
+        {{/unless}}
+        {{/each}}
     </div>
-    <label for="pi">Enter a Pizza you want to eat and click the submit button</label>
-</form>
-<button type="submit">Submit</button>
+
+    <div class="col s6">
+        {{#each pizzas}}
+        {{#if this.polished}}
+            <div class='pizzaEaten'>
+            <div>
+                {{this.pizza_name}}
+            </div>
+            </div>
+        {{/if}}
+        {{/each}}
+    </div>
+    </div>
+</div>
+</main>
+
+<h2>Add A Pizza</h2>
+<div class="row">
+<div class="col s12">
+    <form action="/pizzas" method="POST">
+    <input type="text" id="name" name="pizza_name" placeholder="Uber Delicious Pizza">
+    <button type="submit" class="addPizzaButton">Add The Pizza</button>
+    </form>
+</div>
+</div>

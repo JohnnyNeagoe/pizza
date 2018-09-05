@@ -1,4 +1,4 @@
-INSERT INTO pizzas (name) VALUES ('Large Peperonni');
-INSERT INTO pizzas (name) VALUES ('Cheesy');
-INSERT INTO pizzas (name, polish) VALUES ('Little Ceaser"s Stuffed Crust', true);
-INSERT INTO pizzas (name, polish) VALUES ('Canadian', true);
+INSERT INTO pizzas (pizza_name, polished) VALUES ('Large Peperonni', false);
+INSERT INTO pizzas (pizza_name, polished) VALUES ('Cheesy', false);
+INSERT INTO pizzas (pizza_name, polished) VALUES ('Little Ceaser"s Stuffed Crust', true);
+INSERT INTO pizzas (pizza_name, polished) VALUES ('Canadian', true);
