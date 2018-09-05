@@ -4,7 +4,7 @@ let pizza = require("../models/pizza.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-    pizza.all(function(data) {
+    pizza.selectAll(function(data) {
     var hbsObject = {
         pizzas: data
     };
@@ -14,7 +14,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/pizzas", function(req, res) {
-    cat.create([
+    cat.insertOne([
     "pizza", "polish"
     ], [
     req.body.pizza, req.body.polish
@@ -29,7 +29,7 @@ router.put("/api/pizzas/:id", function(req, res) {
 
     console.log("condition", condition);
 
-    pizza.update({
+    pizza.updateAll({
     polish: req.body.polish
     }, condition, function(result) {
         if (result.changedRows == 0) {

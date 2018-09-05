@@ -1,8 +1,14 @@
-body{
-    background-color: lightcoral;
+body {
+    background-color: rgb(240, 182, 128);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 
-#pic{
-    background-image: url("../img/pizza.jpg")
+#pic {
+    background-image: url("../img/pizza.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
 }
