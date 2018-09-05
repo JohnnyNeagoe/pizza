@@ -14,10 +14,10 @@ let pizza = {
     });
   },
   updateOne: function(objColVals, condition, cb) {
-    orm.updateOne("pizzas", objColVals, condition, function(res) {
+    orm.updateOne('pizzas', objColVals, condition, function(res) {
       cb(res);
     });
-  },
+  }
 };
 
 // Export the database functions for the controller (pizza_Controller.js).

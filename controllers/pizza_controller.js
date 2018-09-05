@@ -13,26 +13,25 @@ router.get("/", function(req, res) {
     });
 });
 
-router.post("/pizzas", function(req, res) {
+router.post('/pizzas', function(req, res) {
     pizza.insertOne([
-    "pizza_name"
+      'pizza_name'
     ], [
-    req.body.pizza_name
-    ],  function(data) {
-    res.redirect("/");
+      req.body.pizza_name
+    ], function(data) {
+      res.redirect('/');
     });
-});
+  });
 
-router.put("/pizzas/:id", function(req, res) {
-    var condition = "id = " + req.params.id;
-    console.log("condition", condition);
+  router.put('/pizzas/:id', function(req, res) {
+    var condition = 'id = ' + req.params.id;
+  
     pizza.updateOne({
-    polished: true
-    },  condition, function(data) {
-        res.redirect("/");
+      polished: true
+    }, condition, function(data) {
+      res.redirect('/');
     });
-});
-
+  });
 
 // Export routes for server.js to use.
 module.exports = router;
