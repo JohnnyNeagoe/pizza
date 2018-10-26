@@ -1,0 +1,10 @@
+CREATE TABLE pizzas 
+(
+id int NOT NULL AUTO_INCREMENT,
+pizza_name varchar(1000) NOT NULL,
+polished BOOLEAN DEFAULT FALSE,
+createdAt TIMESTAMP NOT NULL,
+PRIMARY KEY (id)
+);
+
+SELECT * FROM pizzas;
