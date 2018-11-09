@@ -26,10 +26,8 @@ Javascript Standard
 
 See sample screenshots of what the website looks like below:
 
+![alt text](https://github.com/JohnnyNeagoe/pizza/blob/master/public/assets/img/pizzaShot.png?raw=true)
 
-![alt text](https://github.com/JohnnyNeagoe/pizza/blob/master/assets/images/addPizza.png?raw=true)
-
-![alt text](https://github.com/JohnnyNeagoe/pizza/blob/master/assets/images/removePizza.png?raw=true)
 
 ## Tech/Frameworks used
 
